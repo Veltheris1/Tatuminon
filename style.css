@@ -1,0 +1,107 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  /* Navbar styles */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+  }
+  
+  nav .logo {
+    width: 120px;
+    margin-left: 20px;
+  }
+  
+  /* Video background styles */
+  .video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: -1;
+  }
+  
+  /* Centered content styles */
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: white;
+    padding-top: 60px;  /* Offset for the navbar height */
+  }
+  
+  /* Heading style */
+  h1 {
+    font-size: 4vw;  /* Use viewport width for a responsive font size */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  /* Media Query for Tablets and Smaller Screens */
+  @media (max-width: 768px) {
+    nav {
+      padding: 10px 15px; /* Adjust padding on smaller screens */
+      height: 50px;  /* Smaller navbar height */
+    }
+  
+    nav .logo {
+      width: 100px; /* Adjust logo size */
+      margin-left: 15px;
+    }
+  
+    .content {
+      padding-top: 50px;  /* Adjust for smaller navbar height */
+    }
+  
+    h1 {
+      font-size: 5vw;  /* Increase font size slightly on smaller screens */
+    }
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 480px) {
+    nav {
+      padding: 8px 12px; /* Reduce padding on very small screens */
+      height: 45px;  /* Even smaller navbar height */
+    }
+  
+    nav .logo {
+      width: 90px; /* Further reduce logo size */
+      margin-left: 10px;
+    }
+  
+    .content {
+      padding-top: 45px;  /* Adjust for smaller navbar height */
+    }
+  
+    h1 {
+      font-size: 6vw;  /* Make the font size smaller for mobile */
+    }
+  }
+  
